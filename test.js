@@ -1,5 +1,3 @@
-function call(amount){
-    const tax=0.1;
-    return amount + (amount * tax);
-}
+import chalk from "chalk";
 
+console.log(chalk.green("This is a colored message!"));
