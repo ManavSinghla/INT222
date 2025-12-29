@@ -100,20 +100,92 @@
 
 // app.use("/users",userRoute);.
 
+
+
 // Implement a custom middleware in an Express.js application to log request details such as request URL, HTTP method, and request time.
-import express from 'express';
+// import express from 'express';
 
-const app=express();
-app.listen(3000,()=>{
-  console.log("Server running fine");
-})
+// const app=express();
+// app.listen(3000,()=>{
+//   console.log("Server running fine");
+// })
 
-app.use((req,res,next)=>{
-  console.log(req.url);
-  console.log(req.method);
-  next();
-})
+// app.use((req,res,next)=>{
+//   console.log(req.url);
+//   console.log(req.method);
+//   next();
+// })
 
-app.get("/",(req,res)=>{
-  res.send("Home page");
-})
+// app.get("/",(req,res)=>{
+//   res.send("Home page");
+// })
+
+
+// Create an Express.js application using express-session to manage user sessions.
+// import express from 'express';
+// import session from 'express-session';
+
+// const app=express();
+// app.use(session({
+//   secret: "mysecretkey",
+//   resave: false,
+//   saveUninitialized: true
+// }))
+
+// app.get("/set",(req,res)=>{
+//   req.session.user="Manav";
+//   res.send("Session created");
+// })
+// app.get("/",(req,res)=>{
+//   res.send(req.session.user);
+// })
+// app.get("/destroy", (req, res) => {
+//   req.session.destroy();
+//   res.send("Session destroyed");
+// });
+// app.listen(3000,()=>{
+//   console.log("sever running fine");
+// })
+
+
+
+// Perform CRUD (Create, Read, Update, Delete) operations on MongoDB using Node.js.
+// import { MongoClient } from "mongodb";
+
+// const url = "mongodb://127.0.0.1:27017";
+// const client = new MongoClient(url);
+
+// async function crudOperations() {
+//     // Connect to MongoDB
+//     await client.connect();
+//     console.log("MongoDB connected");
+
+//     const db = client.db("college");
+//     const students = db.collection("students");
+
+//     // CREATE
+//     await students.insertOne({
+//       name: "Manav",
+//       course: "BTech CSE",
+//       cgpa: 8.0
+//     });
+//     console.log("Student inserted");
+
+//     // READ
+//     const result = await students.find({ name: "Manav" }).toArray();
+//     console.log("Student found:", result);
+
+//     // UPDATE
+//     await students.updateOne(
+//       { name: "Manav" },
+//       { $set: { name: "Singla" } }
+//     );
+//     console.log("Student updated");
+
+//     // DELETE
+//     await students.deleteOne({ name: "Singla" });
+//     console.log("Student deleted");
+// }
+
+// crudOperations();
+
